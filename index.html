@@ -16,12 +16,33 @@
 
             secondary: "#ffffff",
             black: "#000000",
+            third: "#c53d41",
+
 
           }
         }
       }
     }
   </script>
+  <style>
+    /* Toggle button */
+    #nav-mobile-btn.close span:first-child {
+            transform: rotate(45deg);
+            top: 4px;
+            position: relative;
+            background:" #B30C39";
+
+        }
+
+        #nav-mobile-btn.close span:nth-child(2) {
+            transform: rotate(-45deg);
+            margin-top: 0px;
+            background:" #B30C39";
+
+        }
+
+        /* Toggle button */
+  </style>
 </head>
 
 <body>
@@ -35,21 +56,21 @@
         <img class="md:hidden block" src="images/logo.png" alt="logo">
 
       </a>
-      <nav id="nav" class="flex text-secondary md:relative absolute top-0 left-0 z-50 items-center md:flex flex md:flex-row flex-col justify-between hidden 
+      <nav id="nav" class="flex text-secondary  md:relative absolute top-0 left-0 z-50 items-center md:flex flex md:flex-row flex-col justify-between hidden 
          md:w-auto w-full md:h-24 h-64 md:py-0 pt-5 md:mt-0 mt-16 md:text-base text-sm text-secondary md:bg-transparent
-         bg-white md:border-none border-b ">
+         bg-black md:border-none border-b ">
 
-        <a class="font-bold duration-100 lg:mr-8 md:mr-4 mr-0 hover:text-black" href="index.html ">Home</a>
-        <a class="font-bold duration-100 lg:mr-8 md:mr-4 mr-0 hover:text-black" href="About.html">About</a>
-        <a class="font-bold duration-100:mr-8 md:mr-4 mr-0 hover:text-black" href="Product.html">Products</a>
+        <a class="font-bold duration-100 lg:mr-8 md:mr-4 mr-0 hover:text-black" href="#index.html ">Home</a>
+        <a class="font-bold duration-100 lg:mr-8 md:mr-4 mr-0 hover:text-black" href="#About.html">About</a>
+        <a class="font-bold duration-100:mr-8 md:mr-4 mr-0 hover:text-black" href="#Product.html">Products</a>
         <div class="flex flex-col w-full font-medium border-2 border-primary md:hidden block">
           <a class=" relative inline-block w-full px-5 py-3 leading-one text-center duration-100:mr-8 md:mr-4 mr-0 hover:text-black"
-            href="Contact.html">Contact Us
+            href="#Contact.html">Contact Us
 
           </a>
         </div>
       </nav>
-      <a href="contact.html" class=" font-bold md:block hidden border-2 hover:border-2 hover-border primary border-secondary rounded-full text-primary hover:text-secondary 
+      <a href="#contact.html" class=" font-bold md:block hidden border-2 hover:border-2 hover-border primary border-secondary rounded-full text-primary hover:text-secondary 
        hover:bg-transparent bg-secondary px-4 py-2 font-boldmd:text-base">Contact</a>
       </a>
       <div id="nav-mobile-btn"
@@ -63,7 +84,7 @@
 
 
   </header>
-  <section style="background-image:url(images/banner.png); background-size: cover; background-repeat: no-repeat;background-position: center; background-color: rgba(0, 0, 0, 0.5);     background-blend-mode: overlay;
+  <section style="background-image:url(/images/banner.png); background-size: cover; background-repeat: no-repeat;background-position: center; background-color: rgba(0, 0, 0, 0.5);     background-blend-mode: overlay;
     ">
 
     <div class="container mx-auto max-w-7xl xl:px-0 lg:px-14 md:px-10 px-5 md:py-48 py-10">
@@ -75,7 +96,7 @@
     </div>
   </section>
   <!-- section-2 -->
-  <section class="">
+  <section id="about">
     <div class="container mx-auto max-w-7xl xl:px-0 lg:px-14 md:px-10 px-5 md:py-20 py-10 flex justify-center md:flex-nowrap	flex-wrap	 ">
       <div class="md:order-1 order-2 md:text-left text-center">
         <h2 class=" md:text-4xl sm:text-3xl text-2xl font-bold text-primary md:pt-0 pt-5">About Us</h2>
@@ -101,7 +122,7 @@
     </div>
   </section>
 <!-- section-3 -->
-<section>
+<section id="products">
   <div class="container mx-auto max-w-7xl xl:px-0 lg:px-14 md:px-10 px-5 md:py-20 py-10  ">
 
     <h2 class=" md:text-4xl sm:text-3xl text-2xl font-bold text-primary md:pt-0 pt-5 text-center pb-10">Products</h2>
@@ -121,12 +142,12 @@
     </div>
   </div>
 </section>
-<section>
+<section id="contact">
   <div class="flex items-center justify-center p-12">
     <!-- Author: FormBold Team -->
     <!-- Learn More: https://formbold.com -->
     <div class="container mx-auto max-w-7xl xl:px-0 lg:px-14 md:px-10 px-5 md:py-20 py-10">
-      <form action="https://formbold.com/s/FORM_ID" method="POST">
+      <form>
         <div class="mb-5">
           <label
             for="name"
@@ -168,7 +189,7 @@
             type="text"
             name="subject"
             id="subject"
-            placeholder="Enter your subject"
+            placeholder=""
             class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
           />
         </div>
@@ -189,7 +210,7 @@
         </div>
         <div>
           <button
-            class="hover:secondary bg-primary py-3 px-8 text-base font-bold text-white outline-none"
+            class="hover:secondary bg-primary py-3 px-8 text-base font-bold text-white outline-none rounded-xl	"
           >
             Submit
           </button>
@@ -201,99 +222,78 @@
   </div>
   
 </section>
-<footer class="footer-1 bg-gray-100 py-8 sm:py-12 text-center text-primary text-center>
-  <div class="container mx-auto px-4">
-    <div class="sm:flex sm:flex-wrap sm:-mx-4 md:py-4 ">
-      <div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6">
-        <h5 class="text-xl font-bold mb-6">PRODUCT</h5>
-        <ul class="list-none footer-links">
-          <li class="mb-2">
-            <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Download</a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Random feature</a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Team feature</a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Stuff for developers</a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Another one</a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Last time</a>
-          </li>
-        </ul>
-      </div>
-      <div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 sm:mt-0">
-        <h5 class="text-xl font-bold mb-6">Resources</h5>
-        <ul class="list-none footer-links">
-          <li class="mb-2">
-            <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Resource</a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Resource name</a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Another resource</a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Final resource</a>
-          </li>
-        </ul>
-      </div>
-      <div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0">
-        <h5 class="text-xl font-bold mb-6">About</h5>
-        <ul class="list-none footer-links">
-          <li class="mb-2">
-            <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Team</a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Locations</a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Privacy</a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Terms</a>
-          </li>
-        </ul>
-      </div>
-      <div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0">
-        <h5 class="text-xl font-bold mb-6">Help</h5>
-        <ul class="list-none footer-links">
-          <li class="mb-2">
-            <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Support</a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Help Center</a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-      <!-- <!-- <div class="px-4 mt-4 sm:w-1/3 xl:w-1/6 sm:mx-auto xl:mt-0 xl:ml-auto">
-        <h5 class="text-xl font-bold mb-6 sm:text-center xl:text-left">Stay connected</h5>
-        <div class="flex sm:justify-center xl:justify-start">
-          <a href="" class="w-8 h-8 border border-2 border-gray-400 rounded-full text-center py-1 text-gray-600 hover:text-white hover:bg-blue-600 hover:border-blue-600">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="" class="w-8 h-8 border border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-blue-400 hover:border-blue-400">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="" class="w-8 h-8 border border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-red-600 hover:border-red-600">
-            <i class="fab fa-discord"></i> -->
-          </a> -->
+<footer class="bg-third text-white ">
+  <div class=" container mx-auto max-w-7xl xl:px-0 lg:px-14 md:px-10 px-5 md:py-20 py-10 flex justify-between items-center">
+    <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
+      <div>
+        <a href="index.html">
+          <img
+            class="h-10 w-auto md:block hidden"
+            src="images/logo.png"
+            alt="lux logo"
+          />
+          <img
+            class="h-6 w-auto md:hidden block"
+            src="images/logo.png"
+            alt="lux logo"
+          />
+        </a>
+        <p class="py-3">Meriiboy is one of the largest producers of fresh ice cream, based in South India. A division of Cousins Group, the business venture was founded in 1990, by 5 closely-knit families. </p>
+        <div class="flex">
+        <i class="fa-brands fa-whatsapp text-2xl pr-3"></i>
+        <i class="fa-brands fa-instagram text-2xl pr-3"></i>
+        <i class="fa-brands fa-facebook text-2xl pr-3"></i>
+        <i class="fa-brands fa-twitter text-2xl pr-3"></i>
         </div>
       </div>
+      <div>
+        <h3 class="py-2 text-secondary">QUICK LINKS</h3>
+        <p>Home</p>
+        <p>About</p>
+        <p>Product</p>
+      </div>
+      <div>
+        <h3 class="py-2 text-secondary">USEFULL LINKS</h3>
+        <p>Home</p>
+        <p>About</p>
+        <p>Product</p>
+      </div>
+      <div>
+        <h3 class="py-2 text-secondary">CONTACT DETAILS</h3>
+          <div class="flex items-center">
+            <i class="fa-solid fa-location-dot text-xl pr-4"></i>
+            <p>Address line-1</p>
+          </div>
+          <div class="flex items-center">
+            <i class="fa-solid fa-envelope text-xl pr-4"></i>
+            <p>merilboy@gmail.com</p>
+          </div>
+          <div class="flex items-center">
+            <i class="fa-solid fa-phone text-xl pr-4"></i>
+            <p>+91 985677654</p>
+          </div>
+      </div>
     </div>
-
-    
   </div>
-</footer>
+  <div class="bg- py-3">
+    <p class="text-center text-black text-lg font-medium">copyright@merilboy.com</p>
+  </div>
+      </footer>
+<script>
+  // Toggle button
+  if (document.getElementById('nav-mobile-btn')) {
+            document.getElementById('nav-mobile-btn').addEventListener('click', function () {
+                if (this.classList.contains('close')) {
+                    document.getElementById('nav').classList.add('hidden');
+                    this.classList.remove('close');
+                } else {
+                    document.getElementById('nav').classList.remove('hidden');
+                    this.classList.add('close');
+                }
+            });
+        }
+        // Toggle button
+</script>
 
 </body>
 
